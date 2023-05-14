@@ -16,5 +16,21 @@ Clone the repository to your local machine
 Create a database and import the database.sql file
 Edit the database connection settings in the config.php file
 Upload the files to your web server
+create a table with the following attributes 
+CREATE TABLE comment (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  user_id INT(11) NOT NULL,
+  comment TEXT NOT NULL,
+  timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+The id attribute is an auto-incrementing integer that serves as the primary key of the table. The user_id attribute is an integer that represents the ID of the user who made the comment. The comment attribute is a text field that stores the comment made by the user. The timestamp attribute is a timestamp that records the date and time the comment was made. The name attribute is a string that represents the name of the user who made the comment.
+
+You can modify the data types and sizes of the attributes as needed to suit your application. Additionally, you may want to add indexes or other constraints to the table .
+
+
+
+
 Conclusion
 This application provides a simple and effective way to implement real-time messaging functionality using AJAX and PHP. It is easy to use, and the installation process is straightforward. With this application, you can provide real-time messaging functionality to your users without the need for sockets, making it an ideal solution for websites that require real-time messaging functionality.
